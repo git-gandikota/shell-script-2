@@ -17,6 +17,6 @@ curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expe
 cd /usr/share/nginx/html &>>$LOGFILE
 
 
-cp /home/ec2-user/practice-shell/expense.conf /etc/nginx/default.d/expense.conf &>>$LOGFILE
+cp /home/ec2-user/shell-script-2/expense.conf /etc/nginx/default.d/expense.conf &>>$LOGFILE
 
 systemctl restart nginx &>>$LOGFILE
