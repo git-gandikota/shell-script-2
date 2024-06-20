@@ -17,8 +17,7 @@ mysql -h db.ramdaws.cloud -uroot -p${mysql_root_password} -e 'show databases;' &
 
 if [ $? -ne 0 ]
 then
-    mysql_secure_instaallation --set-root-pass ${mysql_root_password} &>>$LOGFILE
-    #VALIDATE $? "Setting up root password."
+    mysql_secure_installation --set-root-pass ${mysql_root_password} &>>$LOGFILE
 else
     echo -e "$G MySql root password was already settedup. $N "
 fi
